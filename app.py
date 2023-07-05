@@ -7,8 +7,9 @@ from dotenv import load_dotenv
 img_path = 'img/logo.png'
 img2_path = 'img/logo2.png'
 # APIキーの設定
-load_dotenv(join(dirname(__file__), '.env'))
-openai.api_key = os.environ.get("OPENAI_API_KEY")
+# load_dotenv(join(dirname(__file__), '.env'))
+# openai.api_key = os.environ.get("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 
 col1, col2 = st.columns(2)
